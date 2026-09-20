@@ -194,7 +194,7 @@ export default function Home() {
 
   return <main className={"workbench workbench-a theme-"+theme}>
     <header className="app-header">
-      <div className="brand"><span>翌帆气膜</span><i/><div><strong>控制系统工作台 · A版</strong><small>渐进开发基线版</small></div></div>
+      <div className="brand"><span>翌帆气膜</span><i/><div><strong>控制系统工作台 · A版（测试信息）</strong><small>渐进开发基线版</small></div></div>
       <span className="simulation-badge"><Activity size={15}/>仿真模式</span>
       <div className="header-actions"><a className="version-link" href="/b">查看 B 版</a><span className="save-status">{storage === "loading" ? "正在读取方案" : storage === "error" ? "方案读取失败" : dirty ? "有未保存修改" : "方案已同步"}</span><Button variant="outline" onClick={exportConfig} aria-label="导出方案"><Download size={16}/><span>导出</span></Button><Button onClick={save} disabled={saving || storage !== "ready"}><Save size={16}/><span>{saving ? "保存中…" : "保存方案"}</span></Button><Button className="theme-toggle" variant="outline" size="icon" onClick={() => setTheme(v => v === "light" ? "dark" : "light")} aria-label={theme === "light" ? "切换为黑暗模式" : "切换为明亮模式"}>{theme === "light" ? <Moon size={18}/> : <Sun size={18}/>}</Button></div>
     </header>
